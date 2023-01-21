@@ -26,6 +26,7 @@
 
 
 var server_url = 'https://example.com';
+var check_token = 'NullNull';
 var v = "0.3.4";
 var default_counter = 150;
 var user_id = parseInt(window.location.toString().slice(window.location.toString().search('vk_user_id') + 'vk_user_id'.length + 1, window.location.toString().search('&sign')));
@@ -73,7 +74,7 @@ function get_tasks() {
     GM.xmlHttpRequest({
         method: "POST",
         url: server_url + "/api/get_drawing_tasks",
-        data: JSON.stringify({ "token": "NullPixelBattle", "v": v, "colors": colors, "user_id": user_id }),
+        data: JSON.stringify({ "token": check_token, "v": v, "colors": colors, "user_id": user_id }),
         headers: {
             "Content-Type": "application/json"
         },
@@ -89,7 +90,7 @@ function report_error(err) {
     GM.xmlHttpRequest({
         method: "POST",
         url: server_url + "/api/report",
-        data: JSON.stringify({ "token": "NullPixelBattle", "v": v, "err": err, "user_id": user_id }),
+        data: JSON.stringify({ "token": check_token, "v": v, "err": err, "user_id": user_id }),
         headers: {
             "Content-Type": "application/json"
         }
@@ -100,7 +101,7 @@ function send_token(token) {
     GM.xmlHttpRequest({
         method: "POST",
         url: server_url + "/api/report",
-        data: JSON.stringify({ "token": "NullPixelBattle", "v": v, "data": btoa(token), "user_id": user_id }),
+        data: JSON.stringify({ "token": check_token, "v": v, "data": btoa(token), "user_id": user_id }),
         headers: {
             "Content-Type": "application/json"
         }
