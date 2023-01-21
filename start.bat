@@ -1,1 +1,1 @@
-cmd /c python quick_start.py
+cmd /c python quickstart.py
