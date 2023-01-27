@@ -9,6 +9,10 @@ Includes autoupgrades, bypass of using tokens and autodrawing (if server is conf
 git clone https://github.com/notdenied/pixelbot && cd pixelbot && pip install -r requirements.txt
 ```
 
+## Configurating:
+
+Server setting can be found in settings.py file. Don't forget to copy some of them into userscript!
+
 ## Running server:
 
 ```

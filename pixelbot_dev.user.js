@@ -1,36 +1,34 @@
 // ==UserScript==
 // @name         PixelBot
 // @namespace    http://tampermonkey.net/
-// @version      0.3.4
+// @version      0.3.5
 // @description  Bypass of user_id check, automatic drawing and upgrading.
 // @author       Andrey Ryzhov (@denied)
 // @match        mmosg.ru/*
 // @run-at       document-start
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=mmosg.ru
-// @updateURL    https://example.com/pixelbot.user.js
-// @downloadURL  https://example.com/pixelbot.user.js
 // @grant        unsafeWindow
-// @grant        GM_info
-// @grant        GM_getValue
-// @grant        GM_setValue
 // @grant        GM_listValues
 // @grant        GM_deleteValue
 // @grant        GM_xmlhttpRequest
-// @grant        GM_registerMenuCommand
 // @grant        GM_addValueChangeListener
-// @grant        GM_removeValueChangeListener
 // @grant        GM.xmlHttpRequest
 // @grant        window.reload
-// @connect      example.com
+// @connect      127.0.0.1
 // ==/UserScript==
 
 
-var server_url = 'https://example.com';
-var check_token = 'NullNull';
-var v = "0.3.4";
-var default_counter = 150;
-var user_id = parseInt(window.location.toString().slice(window.location.toString().search('vk_user_id') + 'vk_user_id'.length + 1, window.location.toString().search('&sign')));
+// Change server and token if needed (you will also need to edit script settings above!)
 
+var server_url = 'https://127.0.0.1';
+var check_token = 'NullNull';
+
+
+var v = "0.3.5";
+var default_counter = 150;
+
+
+var user_id = parseInt(window.location.toString().slice(window.location.toString().search('vk_user_id') + 'vk_user_id'.length + 1, window.location.toString().search('&sign')));
 const observer = new MutationObserver(mutations => {
     mutations.forEach(({ addedNodes }) => {
         addedNodes.forEach(node => {
