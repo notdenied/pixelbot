@@ -10,7 +10,7 @@ from threading import Thread
 from copy import deepcopy
 from flask import request, Flask, jsonify
 from PIL import Image
-from .settings import pictures, game_url, check_token
+from settings import pictures, game_url, check_token
 
 
 colors_rgb = [[255, 255, 255], [209, 213, 222], [163, 172, 190], [103, 112, 139], [78, 83, 113], [57, 58, 86], [38, 36, 58], [20, 16, 32], [123, 207, 92], [80, 155, 75], [46, 106, 66], [26, 69, 59], [15, 39, 56], [13, 47, 109], [15, 77, 163], [14, 130, 206], [19, 178, 242], [65, 243, 252], [

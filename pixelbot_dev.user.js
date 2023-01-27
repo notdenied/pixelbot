@@ -20,7 +20,7 @@
 
 // Change server and token if needed (you will also need to edit script settings above!)
 
-var server_url = 'https://127.0.0.1';
+var server_url = 'http://127.0.0.1';
 var check_token = 'NullNull';
 
 
