@@ -7,7 +7,6 @@ import time
 import websockets
 import asyncio
 from threading import Thread
-from flask import request, jsonify, Flask
 from copy import deepcopy
 from flask import request, Flask, jsonify
 from PIL import Image
